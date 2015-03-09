@@ -23,7 +23,7 @@ def profile_count(item):
             except KeyError:
                 accumulator.append('NA')
         current_page+=1
-    return Counter(accumulator)
+    return accumulator
 
 def question_count(seeked_question):
     last_page = False
@@ -41,10 +41,10 @@ def question_count(seeked_question):
             try:
                 for question in person['answers']:
                     if seeked_question in question['question']:
-                        accumulator.append(question['answer'])
+                        accumulator.append(question['answer'].lower())
             except KeyError:
                 accumulator.append('No Answer')
         current_page+=1
-    return Counter(accumulator)
+    return accumulator
 
-print question_count("hardware-related hack")
+print Counter(question_count("What school do you go to"))
