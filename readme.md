@@ -1,9 +1,15 @@
 Hello!
+
 This script is fairly simple to use (I think)
+
 First make sure you have all the requirements (basically the eventbrite python sdk), they're in the requirements.txt file
+
 Then in the secrets.py make sure to have these variables set
+
 event_id = 'whatever
+
 oauth_key = 'whatever'
+
 
 Where 'whatever' are the values that eventbrite gives you for your event.
 
